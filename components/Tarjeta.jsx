@@ -3,21 +3,12 @@ import Tarjetas from './Tarjetas';
 
 function Tarjeta() {
 
-    let acumulador=[];
-    
-    for(let cont=1; cont<=24; cont++){
-        const arregloTarjeta1=TARJETAS[Math.floor(Math.random()*TARJETAS.length)];
-        acumulador=[...acumulador, arregloTarjeta1];
-    };
-    
-    const listado=Array.from(new Set(acumulador));
-    const variable=listado.slice(0,16);
+    const arreglo=TARJETAS.sort(() => Math.random()-0.5);
+    const variable=arreglo.slice(0,16);
         
     return (
-        <div className='div-contenedor'>
-
+        <div className='tarjeta-div'>
             <Tarjetas variable={variable} />
-
         </div>
     );
 };

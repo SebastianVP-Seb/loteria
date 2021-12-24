@@ -11,8 +11,8 @@ function CardLoteria({item}) {
 
     return (
         <div className={`card-div ${state ? 'card-div-active' : ''} `} onClick={cambiarClase} >
-            <Image src={item.imageUrl} width={180} height={200} alt='tarjeta' className='img-card' />
-            <p className='parrafo-card'> {item.nombre} </p>
+            <Image src={item.imageUrl} width={180} height={200} alt='tarjeta' />
+            <p className='card-parrafo'> {item.nombre} </p>
         </div>
     );
 };

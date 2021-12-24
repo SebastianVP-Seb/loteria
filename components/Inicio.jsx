@@ -24,20 +24,14 @@ function Inicio() {
                     <input 
                         id='input-1'
                         name='numeroTarjetas'
-                        className="input" type="number" placeholder="¿Más de una tarjeta?" />
+                        type="number" placeholder="¿Más de una tarjeta?" />
                 </div>
                 <Button variant="outline-info" className='btn-jugar' 
                     onClick={()=>handleClick()}
                     >Jugar</Button>
                     <ToastContainer />
-
-            
-                {/* <div className="contenedor-tarjetas">
-
-                </div> */}
-
             </div>
-            <Tarjeta handleClick={handleClick}  />
+            <Tarjeta />
         </div>
     );
 };
